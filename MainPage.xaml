@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="VideoBug.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VideoBug"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d"
+    Background="Black">
+
+    <StackPanel Orientation="Vertical">
+        
+        <Button
+            Content="Export Screenshot"
+            Click="ExportScreenshot"/>
+
+        <Button
+            Content="Copy Screenshot"
+            Click="CopyScreenshot"/>
+
+        <Button
+            Content="Export Video"
+            Click="ExportVideo"/>
+
+        <StackPanel
+            x:Name="Colours"
+            Orientation="Vertical"
+            Background="White">
+
+            <Rectangle
+                Fill="Red"
+                Width="200"
+                Height="50"/>
+            <Rectangle
+                Fill="Green"
+                Width="200"
+                Height="50"/>
+            <Rectangle
+                Fill="Blue"
+                Width="200"
+                Height="50"/>
+
+            <canvas:CanvasControl
+                x:Name="Canvas"
+                Width="200"
+                Height="300"
+                Draw="RedrawCanvas"/>           
+
+        </StackPanel>
+
+    </StackPanel>
+</Page>
